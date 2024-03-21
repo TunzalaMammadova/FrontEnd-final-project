@@ -1,0 +1,436 @@
+body {
+    font-family: "Jost", sans-serif;
+}
+
+#header-up .contact-me i {
+    padding-right: 5px;
+    color: #0989ff;
+}
+
+#header-up .contact-me span {
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+#header-up .contact-me span:nth-child(1) {
+    border-right: 1px solid rgba(1, 15, 28, .1);
+    padding-right: 15px;
+}
+
+#header-up .contact-me a {
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+
+#header-up .contact-me {
+    display: flex;
+    gap: 20px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#header-up .contact-me span:hover {
+    color: #0989ff;
+}
+
+#header-up {
+    border-bottom: 1px solid rgba(1, 15, 28, .1);
+}
+
+@font-face {
+    font-family: Jost;
+    src: url(./../fonts/Jost-VariableFont_wght.ttf);
+}
+
+#header-up .language-list {
+    width: 100px;
+    height: 90px;
+    margin-top: -5px;
+    z-index: 111;
+    background-color: white;
+}
+
+#header-up .language {
+    width: 100px;
+}
+
+#header-up .language-list ul li {
+    list-style: none;
+    font-weight: 500
+}
+
+#header-up .language ul li {
+    list-style: none;
+    font-weight: 500
+}
+
+#header-up .language ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin-left: -18px;
+}
+
+#header-up .currency-list ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin-left: -18px;
+}
+
+#header-up .currency-list {
+    width: 100px;
+    height: 100px;
+    margin-top: -5px;
+    z-index: 111;
+    background-color: white;
+}
+
+#header-up .currency {
+    width: 100px;
+}
+
+#header-up .currency-list ul li {
+    list-style: none;
+    font-weight: 500
+}
+
+#header-up .currency ul li {
+    list-style: none;
+    font-weight: 500
+}
+
+#header-up .currency ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin-left: -18px;
+}
+
+#header-up .language-list ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin-left: -18px;
+}
+
+
+#header-up .setting-list ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin-left: -18px;
+}
+
+#header-up .setting-list {
+    width: 100px;
+    height: 100px;
+    margin-top: -5px;
+    z-index: 111;
+    background-color: white;
+}
+
+#header-up .setting {
+    width: 100px;
+}
+
+#header-up .setting-list ul li {
+    list-style: none;
+    font-weight: 500;
+}
+
+#header-up .setting ul li {
+    list-style: none;
+    font-weight: 500
+}
+
+#header-up .setting ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin-left: -18px;
+}
+
+#header-up .setting-list ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin-left: -18px;
+}
+
+#header-up .header-right {
+    display: flex;
+    height: 40px;
+    float: right;
+    padding: 5px;
+}
+
+#header-up .header-right .language-area .language {
+    border-right: 1px solid rgba(1, 15, 28, .1);
+    padding-right: 15px;
+}
+
+#header-up .header-right .currency-area .currency {
+    border-right: 1px solid rgba(1, 15, 28, .1);
+}
+
+#header-up .list ul li a:hover {
+    color: #0989ff;
+}
+
+#header-up .list ul li a {
+    transition: all 0.5s;
+}
+
+.header-down-left {
+    display: flex;
+}
+
+#header-down {
+    margin-top: 20px;
+}
+
+#header-down .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#header-down .menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.header-down-right {
+    display: flex;
+}
+
+.header-down-right input {
+    border: 1px solid rgba(1, 15, 28, .1);
+    position: relative;
+    height: 46px;
+    width: 350px;
+    background: #F8F8F8;
+    border: 1px solid rgba(1, 15, 28, .1);
+}
+
+.header-down-right .input-products ::placeholder {
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.header-down-right .input-products img {
+    width: 24px;
+    height: 24px;
+    transform: translateX(-45px);
+}
+
+#main-area {
+    margin-top: 20px;
+}
+
+#backgr-area .backgr {
+    width: 100%;
+}
+
+#backgr-area .backgr img {
+    width: 100%;
+}
+
+#ordinary-area {
+    margin-top: 100px;
+}
+
+#ordinary-area .calendar {
+    margin-top: 20px;
+}
+
+#ordinary-area .calendar span {
+    font-size: 14px;
+    padding: 10px;
+}
+
+#ordinary-area .calendar i {
+    color: #0989ff;
+}
+
+#ordinary-area .clean h3 {
+    font-size: 37px;
+    margin-top: 20px
+}
+
+#ordinary-area .clean a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s;
+}
+
+#ordinary-area .clean a:hover {
+    color: #0989ff;
+}
+
+#ordinary-area .clean p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #55585B;
+    line-height: 26px
+}
+
+#ordinary-area .clean .button-ordinary button {
+    border: none;
+    background-color: black;
+    color: white;
+    width: 130px;
+    padding: 13px;
+    transition: all 0.5s;
+    margin-top: 20px;
+}
+
+#ordinary-area .clean .button-ordinary button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+#video-area {
+    margin-top: 50px;
+}
+
+#video-area .comment {
+    margin-top: 20px;
+}
+
+#video-area .comment span {
+    font-size: 14px;
+    padding: 10px;
+}
+
+#video-area .comment i {
+    color: #0989ff;
+}
+
+#video-area .healthy h3 {
+    font-size: 37px;
+    margin-top: 20px
+}
+
+#video-area .healthy a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s;
+}
+
+#video-area .healthy a:hover {
+    color: #0989ff;
+}
+
+#video-area .healthy p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #55585B;
+    line-height: 26px
+}
+
+#video-area .healthy .button-healthy button {
+    border: none;
+    background-color: black;
+    color: white;
+    width: 130px;
+    padding: 13px;
+    transition: all 0.5s;
+    margin-top: 20px;
+}
+
+#ordinary-area .clean .button-healthy button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+#example-area{
+    margin-top: 50px;
+}
+
+#example-area .example{
+    background: #0989ff;
+    padding: 45px 58px;
+    margin-bottom: 35px;
+    position: relative;
+    z-index: 1;
+}
+   
+#example-area .example p{
+    line-height: 1.31;
+    font-size: 26px;
+    color: #fff;
+    font-weight: 400
+}
+
+#example-area .example span{
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    font-style: inherit;
+    font-weight: 600;
+    position: relative
+}
+
+
+#cream-area {
+    margin-top: 100px;
+}
+
+#cream-area .rana {
+    margin-top: 20px;
+}
+
+#cream-area .rana span {
+    font-size: 14px;
+    padding: 10px;
+}
+
+#cream-area .rana  i {
+    color: #0989ff;
+}
+
+#cream-area .professional h3 {
+    font-size: 37px;
+    margin-top: 20px
+}
+
+#cream-area .professional a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s;
+}
+
+#cream-area .professional a:hover {
+    color: #0989ff;
+}
+
+#cream-area .professional p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #55585B;
+    line-height: 26px
+}
+
+#cream-area .professional .button-cream button {
+    border: none;
+    background-color: black;
+    color: white;
+    width: 130px;
+    padding: 13px;
+    transition: all 0.5s;
+    margin-top: 20px;
+}
+
+#cream-area .professional .button-cream button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
