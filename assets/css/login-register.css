@@ -2,6 +2,10 @@ body {
     font-family: "Jost", sans-serif;
 }
 
+@font-face {
+    font-family: Jost;
+    src: url(./../fonts/Jost-VariableFont_wght.ttf);
+}
 
 #header-up .contact-me span {
     font-family: "Jost", sans-serif;
@@ -35,10 +39,6 @@ body {
     border-bottom: 1px solid rgba(1, 15, 28, .1);
 }
 
-@font-face {
-    font-family: Jost;
-    src: url(./../fonts/Jost-VariableFont_wght.ttf);
-}
 
 #header-up .language-list {
     width: 100px;
@@ -88,6 +88,7 @@ body {
     box-shadow: 0 1px 1px #010f1c33;
     position: absolute;
     animation: .3s ease-in-out 0s normal none 1 running nav-right;
+
 }
 
 #header-up .currency {
@@ -136,23 +137,7 @@ body {
     box-shadow: 0 1px 1px #010f1c33;
     position: absolute;
     animation: .3s ease-in-out 0s normal none 1 running nav-right;
-}
 
-
-@keyframes nav-right {
-    0% {
-        opacity: 0;
-        transform: translateY(5px)
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0)
-    }
-}
-
-.nav-right {
-    animation-name: fadeInDown
 }
 
 #header-up .setting {
@@ -210,13 +195,39 @@ body {
     display: flex;
 }
 
-#header-down {
-    margin-top: 20px;
-    position: relative;
-}
-
 #header-down .menu {
     margin-left: 20px;
+}
+
+
+#header-down {
+    height: 80px;
+    position: fixed !important;
+    left: 0;
+    margin: auto;
+    top: 50;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0 2px 6px #010f1c29;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes nav-right {
+    0% {
+        opacity: 0;
+        transform: translateY(5px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.nav-right {
+    animation-name: nav-right
 }
 
 #header-down .menu i {
@@ -249,9 +260,12 @@ body {
     background-color: white;
     box-shadow: 0 1px 1px #010f1c33;
     position: absolute;
-    transform: perspective(600px) rotateX(-18deg);
-    transition-duration: 5s;
+    transform-origin: top;
+    transition-duration: .1s;
+    transform: perspective(300px) rotateX(-10deg);
+    animation: .3s ease-in-out 0s normal none 1 running fadeInDown;
 }
+
 
 #header-down .product-page ul li {
     list-style: none;
@@ -360,268 +374,326 @@ body {
     transform: translateX(-45px);
 }
 
-#backgr-area .backgr {
-    height: 377px;
-    width: 100%;
-    margin-top: 10px;
-    background: url(../images/breadcrumb.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-#backgr-area .opacity {
-    background-color: black;
-    position: absolute;
-    opacity: 0.5;
-}
-
-#backgr-area .blog {
+#title-area .create {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(130px);
+    margin-top: 50px;
+    gap: 10px;
 }
 
-#backgr-area .blog h3 {
+#title-area .create p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #55585b;
+}
+
+.create a {
+    font-weight: 400;
+    font-size: 16px;
+    color: #0989ff;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+}
+
+.create a:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background-color: #0989ff;
+    transform-origin: left;
+    transition: all 0.5s;
+}
+
+a:hover:before {
+    transform: scaleX(1);
+}
+
+#title-area .account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(180px);
+
+}
+
+#title-area .account h3 {
     font-weight: 500;
     font-size: 44px;
     line-height: 1;
     margin-bottom: 6px;
-    color: white;
+    color: black;
 }
 
-#backgr-area .home-blog {
+#title-area .home-account {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(130px);
+    transform: translateY(180px);
     gap: 10px;
 }
 
-#backgr-area .home-blog span {
+#title-area .home-account span {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
-    color: white;
+    color: #55585b;
 }
 
-#backgr-area .home-blog :nth-child(2) {
+#title-area .home-account :nth-child(2) {
     width: 4px;
     height: 4px;
-    background-color: white;
+    background-color: #55585b;
     border-radius: 50%;
 }
 
-#backgr-area .home-blog span ::after {
+#login-area .login-register {
+    box-shadow: rgba(1, 15, 28, 0.1) 0px 20px 70px;
+    padding: 50px 60px 70px;
+    background-color: white;
+    width: 636px;
+    height: 619px;
+    margin-top: 200px;
+    margin-left: 25%;
+
+}
+
+#login-area .login-page .login-title h3 {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.mini-img-left{
+    position: absolute;
+    z-index: -1;
+    margin-top: 300px;
+}
+
+.mini-img-right{
+    position: absolute;
+    z-index: -1;
+    margin-top: -300px;
+    right: 200px;
+}
+
+
+#login-area .login-page .login-p p {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(73, 83, 91);
+    display: flex;
+    justify-content: center;
+}
+
+.login-page .login-p a {
+    color: #0989ff;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+}
+
+.login-p a::before {
     position: absolute;
     content: "";
-    right: 0;
-    top: 50%;
-    width: 4px;
-    height: 4px;
-    background-color: #a8acb0;
-    border-radius: 50%
-}
-
-#backgr-area .backgr img {
+    left: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background-color: #0989ff;
+    transform-origin: left;
+    transition: all 0.5s;
 }
 
-#ordinary-area {
-    margin-top: 100px;
+
+#login-area .login-img {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
 }
 
-#ordinary-area .calendar {
-    margin-top: 20px;
-}
 
-#ordinary-area .calendar span {
-    font-size: 14px;
-    padding: 10px;
-}
-
-#ordinary-area .calendar i {
-    color: #0989ff;
-}
-
-#ordinary-area .clean h3 {
-    font-size: 37px;
-    margin-top: 20px
-}
-
-#ordinary-area .clean a {
+#login-area .login-img a:nth-child(1) {
+    display: inline-block;
     text-decoration: none;
-    color: black;
-    transition: all 0.5s;
+    width: 200px;
+    height: 56px;
+    line-height: 54px;
+    text-align: center;
+    border: 1px solid rgb(224, 226, 227);
+    font-size: 16px;
+    color: rgb(4, 18, 38);
 }
 
-#ordinary-area .clean a:hover {
-    color: #0989ff;
-}
-
-#ordinary-area .clean p {
-    font-size: 15px;
-    font-weight: 400;
-    color: #55585B;
-    line-height: 26px
-}
-
-#ordinary-area .clean .button-ordinary button {
-    border: none;
-    background-color: black;
-    color: white;
-    width: 130px;
-    padding: 13px;
-    transition: all 0.5s;
-    margin-top: 20px;
-}
-
-#ordinary-area .clean .button-ordinary button:hover {
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-}
-
-#video-area {
-    margin-top: 50px;
-}
-
-#video-area .comment {
-    margin-top: 20px;
-}
-
-#video-area .comment span {
-    font-size: 14px;
-    padding: 10px;
-}
-
-#video-area .comment i {
-    color: #0989ff;
-}
-
-#video-area .healthy h3 {
-    font-size: 37px;
-    margin-top: 20px
-}
-
-#video-area .healthy a {
+#login-area .login-img a {
+    display: inline-block;
+    width: 98px;
+    height: 56px;
+    line-height: 54px;
+    text-align: center;
+    border: 1px solid rgb(224, 226, 227);
+    font-size: 16px;
+    color: rgb(4, 18, 38);
     text-decoration: none;
-    color: black;
     transition: all 0.5s;
 }
 
-#video-area .healthy a:hover {
-    color: #0989ff;
-}
 
-#video-area .healthy p {
-    font-size: 15px;
-    font-weight: 400;
-    color: #55585B;
-    line-height: 26px
-}
-
-#video-area .healthy .button-healthy button {
-    border: none;
-    background-color: black;
-    color: white;
-    width: 130px;
-    padding: 13px;
-    transition: all 0.5s;
-    margin-top: 20px;
-}
-
-#ordinary-area .clean .button-healthy button:hover {
-    background-color: white;
+#login-area .login-img a:hover {
     border: 1px solid black;
-    color: black;
 }
 
-#example-area {
-    margin-top: 50px;
-}
-
-#example-area .example {
-    background: #0989ff;
-    padding: 45px 58px;
-    margin-bottom: 35px;
+#login-area .login-page .login-mail {
     position: relative;
     z-index: 1;
 }
 
-#example-area .example p {
-    line-height: 1.31;
-    font-size: 26px;
-    color: #fff;
-    font-weight: 400
+#login-area .login-page .login-mail p {
+    font-size: 15px;
+    color: rgb(85, 88, 91);
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 0px 20px;
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    left: 170px;
 }
 
-#example-area .example span {
-    font-size: 18px;
-    display: block;
-    margin-top: 10px;
-    color: #fff;
-    font-style: inherit;
-    font-weight: 600;
-    position: relative
-}
-
-#cream-area {
-    margin-top: 100px;
-}
-
-#cream-area .rana {
-    margin-top: 20px;
-}
-
-#cream-area .rana span {
-    font-size: 14px;
-    padding: 10px;
-}
-
-#cream-area .rana i {
-    color: #0989ff;
-}
-
-#cream-area .professional h3 {
-    font-size: 37px;
-    margin-top: 20px
-}
-
-#cream-area .professional a {
+#login-area .login-page .login-mail p a {
     text-decoration: none;
-    color: black;
+    list-style: none;
+    color: rgb(85, 88, 91);
     transition: all 0.5s;
 }
 
-#cream-area .professional a:hover {
+#login-area .login-page .login-mail p a:hover {
     color: #0989ff;
 }
 
-#cream-area .professional p {
-    font-size: 15px;
-    font-weight: 400;
-    color: #55585B;
-    line-height: 26px
+#login-area .login-page .login-mail::after {
+    position: absolute;
+    content: "";
+    left: 0px;
+    right: 0px;
+    bottom: 10px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(224, 226, 227);
+    z-index: -1;
 }
 
-#cream-area .professional .button-cream button {
+#login-area .login-page .input-title {
+    margin-top: 34px;
+}
+
+#login-area .login-page .input-title input {
+    width: 500px;
+    height: 56px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(224, 226, 227);
+    font-size: 14px;
+    color: black;
+}
+
+#login-area .login-page .input-title .login-pass {
+    margin-top: 40px;
+}
+
+#login-area .login-page .input-title input::placeholder {
+    color: rgb(149, 153, 157);
+    padding: 20px;
+}
+
+#login-area .login-page .input-title label {
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    top: -7px;
+    left: 20px;
+    padding: 0px 5px;
+    background-color: white;
+    line-height: 1;
+}
+
+#login-area .login-page .input-title .eye {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+}
+
+#login-area .login-page .input-title .login-email {
+    position: relative;
+}
+
+#login-area .login-page .input-title .login-pass {
+    position: relative;
+}
+
+#login-area .login-page .remember {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+#login-area .login-page .remember i {
+    color: rgb(224, 226, 227);
+    font-size: 18px;
+}
+
+.remember a {
+    font-weight: 400;
+    font-size: 15px;
+    color: #0989ff;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+}
+
+.remember a::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background-color: #0989ff;
+    transform-origin: left;
+    transition: all 0.5s;
+}
+
+a:hover:before {
+    transform: scaleX(1);
+}
+
+#login-area .login-page .login-btn button {
+    width: 500px;
+    height: 56px;
     border: none;
     background-color: black;
     color: white;
-    width: 130px;
-    padding: 13px;
-    transition: all 0.5s;
+    font-size: 16px;
+    font-weight: 500;
     margin-top: 20px;
+    transition: all 0.5s;
 }
 
-#cream-area .professional .button-cream button:hover {
-    background-color: white;
-    border: 1px solid black;
-    color: black;
+#login-area .login-page .login-btn button:hover {
+    background-color: #0989ff;
 }
 
 #footer-area {
@@ -672,7 +744,6 @@ body {
     font-weight: 500;
     font-size: 23px;
     margin-bottom: 15px;
-
 }
 
 #footer-area .account ul li {
@@ -694,7 +765,6 @@ body {
 #footer-area .account ul li a:hover {
     color: #0989ff
 }
-
 
 #footer-area .account ul li a::after {
     position: absolute;
@@ -795,9 +865,10 @@ body {
 
 #footer-area .footer-text a {
     font-size: 16px;
-    color:#0989ff;
+    color: #0989ff;
     margin-top: 20px;
     text-decoration: none;
+
 }
 
 #footer-area .cart {
