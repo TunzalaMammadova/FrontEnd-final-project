@@ -413,7 +413,6 @@ body {
 
 #product-area .product-img {
     display: flex;
-
 }
 
 #product-area .mini-product-img {
@@ -421,7 +420,6 @@ body {
     background-color: #f5f6f8;
     width: 78px;
     height: 100px;
-
 }
 
 #product-area .mini-product-img button {
@@ -457,6 +455,10 @@ body {
     height: 100%;
     position: absolute;
     object-fit: cover;
+}
+
+#product-area .product-img .img-1 {
+    border: 1px solid black;
 }
 
 
@@ -724,6 +726,49 @@ body {
     align-items: center;
     border-bottom: 1px solid #E0E2E3;
     gap: 40px;
+    position: relative;
+}
+
+#desc-area .desc .description {
+    color: black;
+}
+
+.menu-line {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 210px;
+    background-color: black;
+    display: block;
+    z-index: 11111;
+    display: none;
+}
+
+.line-2 {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 140px;
+    background-color: black;
+    display: block;
+    z-index: 11111;
+    left: 380px;
+}
+
+.line-3 {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 120px;
+    background-color: black;
+    display: block;
+    z-index: 11111;
+    left: 780px;
+    display: none;
+}
+
+#desc-area .desc span {
+    color: black;
 }
 
 #desc-area .desc p {
@@ -731,6 +776,7 @@ body {
     color: #a0a2a4;
     font-size: 22px;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 #desc-area .desc p:hover {
@@ -1162,6 +1208,284 @@ a:hover:before {
     margin-top: 20px;
     transition: all 0.5s;
 }
+
+
+#dayproduct {
+    border-top: 1px solid #e6e7e8;
+    margin-top: 150px;
+}
+
+#dayproduct .title {
+    text-align: center;
+    margin-top: 90px;
+}
+
+#dayproduct .title span {
+    font-size: 18px;
+    color: #0989ff;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+#nextdayproduct .title h3 {
+    font-size: 44px;
+    font-weight: 500;
+}
+
+#dayproduct .day-product {
+    display: flex;
+    gap: 25px;
+}
+
+#dayproduct .day-product .card1 {
+    width: 306px;
+    height: 450px;
+    overflow: hidden;
+}
+
+#dayproduct .day-product .card1 .card1-img {
+    width: 306px;
+    height: 350px;
+    background-color: rgb(246, 246, 246);
+    position: relative;
+    overflow: hidden;
+}
+
+#dayproduct .day-product .card1 .card1-img .card1-basket {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex !important;
+    flex-direction: column;
+    transform: translateX(80px);
+    transition: 0.7s all;
+}
+
+#dayproduct .day-product .card1 .card1-img:hover .card1-basket {
+    transform: translateX(0px);
+}
+
+#dayproduct .day-product .card1 .card1-img .card1-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: 0.7s all;
+    bottom: -50px;
+}
+
+#nextdayproduct .day-product .card1 .card1-img:hover .card1-button {
+    bottom: 0;
+}
+
+#dayproduct .day-product .card1 .card1-img .card1-button button {
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 5px 30px;
+}
+
+#dayproduct .day-product .card1 .card1-img .card1-basket button {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background: var(--tp-common-white);
+    border: 1px solid #dfe0e1;
+    box-shadow: 0 1px 1px #010f1c1a;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s all;
+    background-color: white;
+}
+
+#dayproduct .day-product .card1 .card1-img .card1-basket button:hover {
+    color: white;
+    background-color: #010f1c;
+}
+
+#dayproduct .day-product .card1 .card1-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s all;
+}
+
+#dayproduct .day-product .card1 .card1-img:hover img {
+    transform: scale(1.1);
+}
+
+#dayproduct .day-product .card1 .card1-img span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#dayproduct .day-product .card1 .card1-text :nth-child(1) {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+#dayproduct .day-product .card1 .card1-text :nth-child(2) {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: black;
+}
+
+#dayproduct .day-product .card1 .card1-text :nth-child(3) {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+
+#dayproduct .day-product .card1 .card1-text :nth-child(4) {
+    text-decoration-line: line-through;
+    font-weight: 400;
+    font-size: 16px;
+    color: #a0a2a4;
+}
+
+#dayproduct .day-product .card2 {
+    width: 306px;
+    height: 450px;
+    overflow: hidden;
+}
+
+#dayproduct .day-product .card2 .card2-img {
+    width: 306px;
+    height: 350px;
+    background-color: rgb(246, 246, 246);
+    position: relative;
+    overflow: hidden;
+}
+
+#dayproduct .day-product .card2 .card2-img .card2-basket {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex !important;
+    flex-direction: column;
+    transform: translateX(80px);
+    transition: 0.7s all;
+}
+
+#dayproduct .day-product .card2 .card2-img:hover .card2-basket {
+    transform: translateX(0px);
+}
+
+#dayproduct .day-product .card2 .card2-img .card2-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: 0.7s all;
+    bottom: -50px;
+}
+
+#dayproduct .day-product .card2 .card2-img:hover .card2-button {
+    bottom: 0;
+}
+
+#dayproduct .day-product .card2 .card2-img .card2-button button {
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 5px 30px;
+}
+
+#dayproduct .day-product .card2 .card2-img .card2-basket button {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border: 1px solid #dfe0e1;
+    box-shadow: 0 1px 1px #010f1c1a;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s all;
+    background-color: white;
+}
+
+#dayproduct .day-product .card2 .card2-img .card2-basket button:hover {
+    color: white;
+    background-color: #010f1c;
+}
+
+#dayproduct .day-product .card2 .card2-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s all;
+}
+
+#dayproduct .day-product .card2 .card2-img:hover img {
+    transform: scale(1.1);
+}
+
+#dayproduct .day-product .card2 .card2-img span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+#dayproduct .day-product .card2 .card2-text :nth-child(1) {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+#dayproduct .day-product .card2 .card2-text :nth-child(2) {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: black;
+}
+
+#dayproduct .day-product .card2 .card2-text :nth-child(3) {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+}
+
 
 #footer-area {
     margin-top: 100px;
