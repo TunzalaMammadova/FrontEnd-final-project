@@ -8,8 +8,7 @@ let icon = document.querySelector(".sort i");
 
 sortPage.addEventListener("click", function () {
     sortList.classList.toggle("d-none");
-    openIcon.classList.add("d-none");
-    closeIcon.classList.remove("d-none");
+    icon.classList.toggle("open")
 })
 
 
