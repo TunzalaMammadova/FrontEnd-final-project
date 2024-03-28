@@ -506,9 +506,9 @@ body {
     color: black;
 }
 
-.right-area {
+#ordinary-area .right-area {
+    position: sticky;
     top: 120px;
-    position: sticky !important;
 }
 
 #ordinary-area .ordinary-search input {

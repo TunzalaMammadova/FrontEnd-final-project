@@ -394,6 +394,7 @@ body {
     color: #55585b;
     padding-right: 12px;
     margin-right: 5px;
+    position: relative;
 }
 
 #shop-area .title-up span {
@@ -402,6 +403,17 @@ body {
     color: #55585b;
     padding-right: 12px;
     margin-right: 5px;
+}
+
+#shop-area .title-up a::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    background-color: #a8acb0;
+    border-radius: 50%
 }
 
 #shop-area h3 {
@@ -793,6 +805,21 @@ a {
     font-weight: 500;
     font-size: 16px;
     color: black;
+}
+
+#shop-area .carts .cart1 .price-area {
+    display: flex;
+    gap: 5px;
+}
+
+#shop-area .carts .cart1 .span1 span {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+
+#shop-area .carts .cart1 .span1 {
+    display: flex;
 }
 
 #shop-area .products .page button:nth-child(1) {
