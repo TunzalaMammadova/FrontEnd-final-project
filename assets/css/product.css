@@ -260,10 +260,7 @@ body {
     background-color: white;
     box-shadow: 0 1px 1px #010f1c33;
     position: absolute;
-    transform-origin: top;
-    transition-duration: .1s;
-    transform: perspective(300px) rotateX(-10deg);
-    animation: .3s ease-in-out 0s normal none 1 running fadeInDown;
+    animation: .3s ease-in-out 0s normal none 1 running nav-right;
 }
 
 
@@ -1242,6 +1239,17 @@ a:hover:before {
     height: 450px;
     overflow: hidden;
 }
+
+#dayproduct .day-product .card1-basket img{
+    width: 20px !important;
+    height: 20px !important;
+}
+
+#dayproduct .day-product .card2-basket img{
+    width: 20px !important;
+    height: 20px !important;
+}
+
 
 #dayproduct .day-product .card1 .card1-img {
     width: 306px;

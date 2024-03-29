@@ -242,8 +242,7 @@ body {
     background-color: white;
     box-shadow: 0 1px 1px #010f1c33;
     position: absolute;
-    transform: perspective(600px) rotateX(-18deg);
-    transition-duration: 5s;
+    animation: .3s ease-in-out 0s normal none 1 running nav-right;
 }
 
 /* #header-down-center {
@@ -392,6 +391,11 @@ body {
     border: 2px solid rgba(1, 15, 28, .1);
     border-radius: 50%;
     margin-right: 10px
+}
+
+#header-down-center .sign-area .sign-text a{
+    text-decoration: none;
+    color: black;
 }
 
 #header-down-center .sign-area .sign-text span {

@@ -260,12 +260,8 @@ body {
     background-color: white;
     box-shadow: 0 1px 1px #010f1c33;
     position: absolute;
-    transform-origin: top;
-    transition-duration: .1s;
-    transform: perspective(300px) rotateX(-10deg);
-    animation: .3s ease-in-out 0s normal none 1 running fadeInDown;
+    animation: .3s ease-in-out 0s normal none 1 running nav-right;
 }
-
 
 #header-down .product-page ul li {
     list-style: none;
@@ -731,6 +727,13 @@ body {
     gap: 10px;
     transform: translateX(-70px);
     transition: 0.5s all;
+}
+
+
+#shop-area .carts .cart1 .cart1-img .cart1-basket img{
+    width: 20px !important;
+    height: 20px !important;
+    background-color: transparent;
 }
 
 #shop-area .carts .cart1:hover .cart1-img .cart1-basket {

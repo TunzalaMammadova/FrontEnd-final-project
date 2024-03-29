@@ -249,8 +249,7 @@ body {
     background-color: white;
     box-shadow: 0 1px 1px #010f1c33;
     position: absolute;
-    transform: perspective(600px) rotateX(-18deg);
-    transition-duration: 5s;
+    animation: .3s ease-in-out 0s normal none 1 running nav-right;
 }
 
 #header-down {
@@ -477,12 +476,6 @@ body {
     color: #0989ff;
 }
 
-#ordinary-area .clean .button-healthy button:hover {
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-}
-
 #ordinary-area .clean p {
     font-size: 15px;
     font-weight: 400;
@@ -501,6 +494,23 @@ body {
 }
 
 #ordinary-area .clean .button-ordinary button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+
+#ordinary-area .video-area .button-healthy button {
+    border: none;
+    background-color: black;
+    color: white;
+    width: 130px;
+    padding: 13px;
+    transition: all 0.5s;
+    margin-top: 20px;
+}
+
+#ordinary-area .video-area .button-healthy button:hover {
     background-color: white;
     border: 1px solid black;
     color: black;
@@ -686,16 +696,6 @@ body {
     font-weight: 400;
     color: #55585B;
     line-height: 26px
-}
-
-#ordinary-area .healthy .button-healthy button {
-    border: none;
-    background-color: black;
-    color: white;
-    width: 130px;
-    padding: 13px;
-    transition: all 0.5s;
-    margin-top: 20px;
 }
 
 #ordinary-area .categories h3 {

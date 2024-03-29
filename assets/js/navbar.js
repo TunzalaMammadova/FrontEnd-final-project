@@ -5,7 +5,8 @@ let currency = document.querySelector(".currency");
 let set = document.querySelector(".setting");
 let langList = document.querySelector(".language-list");
 let currencyList = document.querySelector(".currency-list");
-let settingList = document.querySelector(".setting-list")
+let settingList = document.querySelector(".setting-list");
+let mainArea = document.querySelector("main");
 
 
 lang.addEventListener("click", function (e) {
@@ -37,7 +38,7 @@ productList.addEventListener("mouseover", function () {
     productPage.classList.remove("d-none");
 })
 
-productList.addEventListener("mouseout", function () {
+mainArea.addEventListener("mouseout", function () {
     productPage.classList.add("d-none");
 })
 
