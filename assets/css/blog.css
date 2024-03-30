@@ -252,7 +252,7 @@ body {
     animation: .3s ease-in-out 0s normal none 1 running nav-right;
 }
 
-#header-down {
+/* #header-down {
     height: 80px;
     position: fixed !important;
     left: 0;
@@ -264,7 +264,7 @@ body {
     background: white;
     display: flex;
     align-items: center;
-}
+} */
 
 #header-down .product-page ul li {
     list-style: none;

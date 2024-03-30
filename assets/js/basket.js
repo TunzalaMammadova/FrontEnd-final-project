@@ -1,19 +1,20 @@
 "use strict";
 
-let wish = [];
+let basket = [];
 
-if (JSON.parse(localStorage.getItem("wish")) == null) {
-    localStorage.setItem("wish", JSON.stringify(wish));
+if (JSON.parse(localStorage.getItem("basket")) == null) {
+    localStorage.setItem("basket", JSON.stringify(basket));
 
 } else {
 
-    wish = JSON.parse(localStorage.getItem("wish"));
+    basket = JSON.parse(localStorage.getItem("basket"));
 }
 
-function checkCartForShowDatas(wish) {
+
+function checkCartForShowDatas(basket) {
     let cartAlert = document.querySelector(".cart-alert");
-    let cartTable = document.querySelector(".cart-table");
-    if (wish.length == 0) {
+    let cartTable = document.querySelector(".basket-area");
+    if (basket.length == 0) {
         cartAlert.classList.remove("d-none");
         cartTable.classList.add("d-none");
 
@@ -23,49 +24,53 @@ function checkCartForShowDatas(wish) {
     }
 }
 
-checkCartForShowDatas(wish);
+checkCartForShowDatas(basket);
 
-getwishCount(wish);
+getbasketCount(basket);
 
-function getwishCount(arr) {
-    let wishCount = 0;
+function getbasketCount(arr) {
+    let basketCount = 0;
     if (arr.length != 0) {
         for (const item of arr) {
-            wishCount += item.count;
+            basketCount += item.count;
         }
     }
-    document.querySelector(".header-down-right .wish-count").innerText = wishCount;
+
+    document.querySelector(".header-down-right .wish-count").innerText = basketCount;
 }
 
 
-function getwishDatas() {
+function getbasketDatas() {
     let tableBody = document.querySelector("tbody");
 
     let datas = "";
-    wish.forEach(product => {
+    basket.forEach(product => {
 
         datas += `<tr>
         <td> <img src="${product.image}" style="width: 100px; height: 100px;" alt="">
         ${product.name}
         </td>
-        <td>${product.price} ₼</td></span>
+        <td>${product.price} $</td></span>
         <td><button>Add To Cart</button</td>
-        <td><p><img src="./assets/images/del.svg" alt=""> Remove<p></i></td>
+        <td><p class="delete-icon" data-id="${product.id}"><img src="./assets/images/del.svg" alt="">Remove<p></i></td>
         </tr>`
     });
 
     tableBody.innerHTML = datas;
+
+
+    document.querySelectorAll(".delete-icon").forEach(deleteIcon => {
+        deleteIcon.addEventListener("click", function () {
+            basket = basket.filter(product => product.id != this.getAttribute("data-id"));
+           
+            localStorage.setItem("basket", JSON.stringify(basket));
+            this.parentNode.parentNode.remove();
+
+            checkCartForShowDatas(basket);
+            getbasketCount(basket);
+        })
+    })
 }
 
-getwishDatas();
+getbasketDatas();
 
-// function getGrandTotal(datas) {
-//     let grandTotal = 0;
-//     datas.forEach(data => {
-//         grandTotal += (data.price * data.count)
-//     });
-
-//     document.querySelector(".total span").innerText = grandTotal;
-// }
-
-// getGrandTotal(wish);

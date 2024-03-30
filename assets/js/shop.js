@@ -13,8 +13,6 @@ sortPage.addEventListener("click", function () {
 
 
 
-
-
 let basket = [];
 
 if (JSON.parse(localStorage.getItem("basket")) == null) {
@@ -69,15 +67,6 @@ addBtns.forEach(btn => {
 
     })
 });
-
-
-
-
-
-
-
-
-
 
 
 
